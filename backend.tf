@@ -4,6 +4,6 @@ terraform {
     region  = "eu-west-2"
     profile = "default"
     key     = "deploy_iac_tf_ansible"
-    bucket  = "tf-chin-state-bucket"
+    bucket  = "chin-terraform-state"
   }
 }
