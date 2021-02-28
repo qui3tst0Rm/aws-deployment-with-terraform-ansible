@@ -16,16 +16,16 @@ data "aws_ssm_parameter" "linuxAmiLondon" {
 resource "aws_key_pair" "master-key" {
   provider   = aws.region-master
   key_name   = "jenkins"
-  #public_key = file("/home/chine/Projects/Cloud-Engineer-Projects/Ansible/deploy_iac_tf_ansible/key_pair/id_rsa.pub")
-  public_key = file("/home/chine/Projects/Cloud_Engineer_Projects/Ansible/deploy_iac_tf_ansible/key_pair/id_rsa.pub")
+  public_key = file("/Users/chin/Projects/Cloud-Engineer-Projects/Ansible/aws-deployment-with-terraform-ansible/key_pair/id_rsa.pub")
+  #public_key = file("/home/chine/Projects/Cloud_Engineer_Projects/Ansible/deploy_iac_tf_ansible/key_pair/id_rsa.pub")
 }
 
 #Create key-pair for logging into EC2 in eu-west-2
 resource "aws_key_pair" "worker-key" {
   provider   = aws.region-worker
   key_name   = "jenkins"
-  #public_key = file("/user/chine/Projects/Cloud-Engineer-Projects/Ansible/deploy_iac_tf_ansible/key_pair/id_rsa.pub")
-  public_key = file("/home/chine/Projects/Cloud_Engineer_Projects/Ansible/deploy_iac_tf_ansible/key_pair/id_rsa.pub")
+  public_key = file("/Users/chin/Projects/Cloud-Engineer-Projects/Ansible/aws-deployment-with-terraform-ansible/key_pair/id_rsa.pub")
+  #public_key = file("/home/chine/Projects/Cloud_Engineer_Projects/Ansible/deploy_iac_tf_ansible/key_pair/id_rsa.pub")
 }
 
 #Create and bootstrap EC2 in us-east-1
