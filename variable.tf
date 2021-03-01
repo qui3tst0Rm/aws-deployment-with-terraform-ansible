@@ -37,3 +37,9 @@ variable "ssh-user" {
   type    = string
   default = "ec2-user"
 }
+
+variable "webserver-port" {
+  type    = number
+  default = 80
+
+}
